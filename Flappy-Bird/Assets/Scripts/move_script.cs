@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class move_script : MonoBehaviour
 {
-    public float speedMultiplier = 100;
+    public float speedMultiplier = 1;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += Vector3.left * speedMultiplier * Time.deltaTime;
+        Destroy(GetComponent<GameObject>(), 2);
     }
 }
