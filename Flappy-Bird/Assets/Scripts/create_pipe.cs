@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class create_pipe : MonoBehaviour
 {
-    public float period = 1;
+    public double period = 4;
+    public double minPeriod = 1.7; 
     private float timer = 0;
     public GameObject pipe;
     public float height;
@@ -21,6 +22,7 @@ public class create_pipe : MonoBehaviour
     {
         if (timer > period) {
             CreatePipe();
+            UpdatePeriod();
         }
 
         timer += Time.deltaTime;
@@ -33,5 +35,11 @@ public class create_pipe : MonoBehaviour
         newPipe.transform.position = transform.position + displacement;
         Destroy(newPipe, destroyTime);
         timer = 0;
+    }
+
+    void UpdatePeriod() {
+        if (period > minPeriod) {
+            period = period * 0.98;
+        }
     }
 }
