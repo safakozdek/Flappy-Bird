@@ -15,6 +15,5 @@ public class move_script : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.left * speedMultiplier * Time.deltaTime;
-        Destroy(GetComponent<GameObject>(), 2);
     }
 }
