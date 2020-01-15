@@ -1,2 +1,2 @@
 # Flappy-Bird
- Flappy Bird implemented in Unity for learning purposes
+ Flappy Bird implemented using Unity2D for learning purposes
